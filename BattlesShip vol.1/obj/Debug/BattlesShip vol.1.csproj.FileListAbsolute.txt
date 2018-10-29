@@ -1,0 +1,7 @@
+C:\Users\spaik\source\repos\BattlesShip vol.1\BattlesShip vol.1\bin\Debug\BattlesShip vol.1.exe.config
+C:\Users\spaik\source\repos\BattlesShip vol.1\BattlesShip vol.1\bin\Debug\BattlesShip vol.1.exe
+C:\Users\spaik\source\repos\BattlesShip vol.1\BattlesShip vol.1\bin\Debug\BattlesShip vol.1.pdb
+C:\Users\spaik\source\repos\BattlesShip vol.1\BattlesShip vol.1\obj\Debug\BattlesShip vol.1.csprojAssemblyReference.cache
+C:\Users\spaik\source\repos\BattlesShip vol.1\BattlesShip vol.1\obj\Debug\BattlesShip vol.1.csproj.CoreCompileInputs.cache
+C:\Users\spaik\source\repos\BattlesShip vol.1\BattlesShip vol.1\obj\Debug\BattlesShip vol.1.exe
+C:\Users\spaik\source\repos\BattlesShip vol.1\BattlesShip vol.1\obj\Debug\BattlesShip vol.1.pdb
