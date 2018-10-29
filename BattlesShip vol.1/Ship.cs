@@ -9,14 +9,15 @@ namespace BattlesShip_vol._1
     public class Ship
     {
         private int size;
-        private int x;
-        private int y;
+        private List<Cell> cellsShip = new List<Cell>();
 
-        public Ship(int size, int x, int y)
+        public Ship(int size, Cell[] cells)
         {
             this.size = size;
-            this.x = x;
-            this.y = y;
+            for (int i = 0; i < cells.Length; i++)
+            {
+                cellsShip.Add(cells[i]); 
+            }
 
         }
          
@@ -24,32 +25,17 @@ namespace BattlesShip_vol._1
         {
             this.size = size;
         }
-
-        public void SetX(int x)
-        {
-            this.x = x;
-        }
-
-        public void SetY(int y)
-        {
-            this.y = y;
-        }
-
+        
         public int GetSize()
         {
             return size;
         }
 
-        public int GetX()
+        public List<Cell> GetCells()
         {
-            return x;
+            return cellsShip;
         }
-
-        public int GetY()
-        {
-            return y;
-        }
-
+        
         public bool isExist()
         {
             return size != 0 ? true : false;

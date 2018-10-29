@@ -57,13 +57,14 @@ namespace BattlesShip_vol._1
             botField.GetCellShip();
             Console.WriteLine("Введи кординаты: ");
             Error(out x, out y);
-            var cell = botField.GetCell(x, y);
-            if (cell.isShipHere())
+            if (botField.isShipHere(x, y))
             {
-                cell.SetShip(new Ship(0, x, y));
-                Console.WriteLine("Все в корабль");
-                var ships = botField.ShipCount();
-                if (ships != 0)
+                var result = botField.ShotTo(x, y);
+                if (result == "killed")
+                    Console.WriteLine("Все в корабль. Убил");
+                else
+                    Console.WriteLine("Все по кораблю. Попал");
+                if (botField.ShipCount() != 0)
                 {
                     nextTurn();
                 }
@@ -97,13 +98,10 @@ namespace BattlesShip_vol._1
             }
             while (!CheckCoord(x, y));
 
-            var cell = myField.GetCell(x, y);
-            if (cell.isShipHere())
+            if (myField.isShipHere(x, y))
             {
-                cell.SetShip(new Ship(0, x, y));
                 Console.WriteLine("Бот попал " + x + " " + y);
-                var ships = myField.ShipCount();
-                if (ships != 0)
+                if (myField.ShipCount() != 0)
                 {
                     nextTurn();
                 }

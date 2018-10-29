@@ -10,14 +10,14 @@ namespace BattlesShip_vol._1
     {
         private int x;
         private int y;
-        private Ship ship;
+        private bool isShip = false;
 
-        public Cell(int x, int y, Ship ship)
+        public Cell(int x, int y)
         {
             this.x = x;
             this.y = y;
-            this.ship = ship;
         }
+
 
         public int GetX ()
         {
@@ -29,14 +29,9 @@ namespace BattlesShip_vol._1
             return y;
         }
 
-        public Ship GetShip()
-        {
-            return ship;
-        }
-
         public bool isShipHere()
         {
-            return ship.isExist() ? true : false;
+            return isShip;
         }
 
         public void SetX(int x)
@@ -49,14 +44,14 @@ namespace BattlesShip_vol._1
             this.y = y;
         }
 
-        public void SetShip(Ship ship)
+        public void SetShip()
         {
-            this.ship = ship;
+            isShip = true;
         }
 
         public string ToString ()
         {
-            return "X = " + x + "; Y = " + y + "; " + ship.ToString();
+            return "X = " + x + "; Y = " + y + "; ";
         }
     }
 }
